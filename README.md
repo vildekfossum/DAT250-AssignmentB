@@ -4,6 +4,7 @@ This project is completed by Group 4: Kathrine Hermansen, Julie Heldal, Øystein
 
 Screenshots:
 Diagram of the tables in the database
+
 ![image](https://user-images.githubusercontent.com/42578149/133603345-7256206a-7fc6-4bed-b78a-a1d86e91034c.png)
 
 Inspection of the tables in IntelliJ
