@@ -1,31 +1,35 @@
 package no.hvl.dat250.jpa.Entities;
 
-public final class EntityCreator {
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
-    public User createUser(String username,String firstname, String lastname, String password) {
-        User user = new User();
-        user.setUsername(username);
-        user.setFirstname(firstname);
-        user.setLastname(lastname);
-        user.setPassword(password);
-        return user;
+public class EntityCreator {
+
+    public PollUser createPollUser(String username,String firstname, String lastname, String password) {
+        PollUser pollUser = new PollUser();
+        pollUser.setUsername(username);
+        pollUser.setFirstname(firstname);
+        pollUser.setLastname(lastname);
+        pollUser.setPassword(password);
+        return pollUser;
     }
 
-    public User createTempUser() {
-        User user = new User();
-        return user;
+    public PollUser createTempUser() {
+        PollUser pollUser = new PollUser();
+        return pollUser;
     }
 
-    public Poll createPoll(String pollName, boolean isPublic, User user) {
+    public Poll createPoll(String pollName, boolean isPublic, PollUser pollUser) {
         Poll poll = new Poll();
         poll.setPollName(pollName);
         poll.setPublic(isPublic);
-        poll.setUser(user);
-        user.addPoll(poll);
+        poll.setPollUser(pollUser);
+        pollUser.addPoll(poll);
         return poll;
     }
 
-    public Vote createVote(Poll poll, User voter, String value){
+    public Vote createVote(Poll poll, PollUser voter, String value){
         Vote vote = new Vote();
         vote.setPoll(poll);
         vote.setVoter(voter);

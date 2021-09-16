@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-public class User {
+public class PollUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;

@@ -18,20 +18,9 @@ public class Main {
         // read the existing entries and write to console
 
         // create new
-        em.getTransaction().begin();
-
         EntityCreator ec = new EntityCreator();
+        EntityDAO eDAO = new EntityDAO();
 
-        User user = ec.createUser("Katti98", "Kathrine", "Hermansen", "Katt123");
-        Poll poll = ec.createPoll("Are Cats Great?", false, user);
-        Vote vote = ec.createVote(poll, user, "Yes");
-
-        em.persist(user);
-        em.persist(poll);
-        em.persist(vote);
-        em.getTransaction().commit();
-
-        em.close();
-
+        //eDAO.addPollUserdb(ec.createPollUser("Molle", "Malin", "Iversen", "123456"));
     }
 }

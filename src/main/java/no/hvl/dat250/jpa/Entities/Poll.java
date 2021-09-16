@@ -12,8 +12,8 @@ public class Poll {
     private boolean isPublic;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "polluser_id")
+    private PollUser pollUser;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "poll")
     private Set<Vote> votes = new HashSet<Vote>();
@@ -53,11 +53,11 @@ public class Poll {
         this.votes = votes;
     }
 
-    public User getUser() {
-        return user;
+    public PollUser getPollUser() {
+        return pollUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setPollUser(PollUser pollUser) {
+        this.pollUser = pollUser;
     }
 }
