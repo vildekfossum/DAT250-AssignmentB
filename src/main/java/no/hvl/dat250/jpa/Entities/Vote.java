@@ -15,8 +15,8 @@ public class Vote {
     private Poll poll;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User voter;
+    @JoinColumn(name = "polluser_id")
+    private PollUser voter;
 
     private String value;
 
@@ -44,11 +44,11 @@ public class Vote {
         this.value = value;
     }
 
-    public User getVoter() {
+    public PollUser getVoter() {
         return voter;
     }
 
-    public void setVoter(User voter) {
+    public void setVoter(PollUser voter) {
         this.voter = voter;
     }
 }

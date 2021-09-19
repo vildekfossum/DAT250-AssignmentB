@@ -4,7 +4,7 @@
              version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
     <persistence-unit name="votesphere" transaction-type="RESOURCE_LOCAL">
         <class>no.hvl.dat250.jpa.Entities.Poll</class>
-        <class>no.hvl.dat250.jpa.Entities.User</class>
+        <class>no.hvl.dat250.jpa.Entities.PollUser</class>
         <class>no.hvl.dat250.jpa.Entities.Vote</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>

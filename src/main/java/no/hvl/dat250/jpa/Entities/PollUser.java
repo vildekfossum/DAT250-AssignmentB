@@ -14,7 +14,7 @@ public class PollUser {
     private String lastname;
     private String password;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pollUser")
     private Set<Poll> polls = new HashSet<>();
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "voter")

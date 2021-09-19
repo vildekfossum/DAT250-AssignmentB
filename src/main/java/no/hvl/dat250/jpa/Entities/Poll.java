@@ -8,6 +8,7 @@ import java.util.Set;
 public class Poll {
     @Id
     private int pollId;
+
     private String pollName;
     private boolean isPublic;
 
