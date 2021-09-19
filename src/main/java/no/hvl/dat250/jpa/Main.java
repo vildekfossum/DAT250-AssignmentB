@@ -1,6 +1,6 @@
 package no.hvl.dat250.jpa;
 
-import no.hvl.dat250.jpa.Entities.EntityCreator;
+
 import no.hvl.dat250.jpa.Entities.*;
 
 
