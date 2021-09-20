@@ -8,7 +8,7 @@ import java.util.Set;
 public class Poll {
     @Id
     private int pollId;
-
+    private int pin;
     private String pollName;
     private boolean isPublic;
 
@@ -59,5 +59,13 @@ public class Poll {
 
     public void setPollUser(PollUser pollUser) {
         this.pollUser = pollUser;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public void setPin(int pin) {
+        this.pin = pin;
     }
 }

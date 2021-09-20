@@ -13,7 +13,7 @@ public class PollUser {
     private String firstname;
     private String lastname;
     private String password;
-    private int pin;
+
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pollUser")
     private Set<Poll> polls = new HashSet<>();
@@ -85,11 +85,5 @@ public class PollUser {
         this.votes = votes;
     }
 
-    public int getPin() {
-        return pin;
-    }
 
-    public void setPin(int pin) {
-        this.pin = pin;
-    }
 }
