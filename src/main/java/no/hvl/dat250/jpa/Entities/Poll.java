@@ -13,7 +13,6 @@ public class Poll {
     private boolean isPublic;
 
     @ManyToOne
-    @JoinColumn(name = "polluser_id")
     private PollUser pollUser;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "poll")

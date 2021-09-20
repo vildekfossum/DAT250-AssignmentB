@@ -11,11 +11,9 @@ public class Vote {
     private int voteId;
 
     @ManyToOne
-    @JoinColumn(name = "poll_id")
     private Poll poll;
 
     @ManyToOne
-    @JoinColumn(name = "polluser_id")
     private PollUser voter;
 
     private String value;
